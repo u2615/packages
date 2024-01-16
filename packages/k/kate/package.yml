@@ -1,8 +1,8 @@
 name       : kate
-version    : 23.08.4
-release    : 77
+version    : 24.01.90
+release    : 78
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.4/src/kate-23.08.4.tar.xz : 297facaab205f67f2c61b17650ef27a10b32ea699083577eeece25d0beb3fba2
+    - https://cdn.download.kde.org/unstable/release-service/24.01.90/src/kate-24.01.90.tar.xz : dcd62c462e837d3af42a9cb16dd9b349ba5061d1451c2d36318221e8a0f20790
 homepage   : https://apps.kde.org/kate
 license    :
     - GPL-2.0-or-later
@@ -14,33 +14,32 @@ license    :
     - MIT
 component  : desktop.kde.core
 summary    : KDE advanced text editor
-description:
-    Kate is a multi-document, multi-view text editor by KDE. It features stuff like codefolding, syntaxhighlighting, dynamic word wrap, an embedded console, an extensive plugin interface and some prelimentary scripting support. This package also contains kwrite, a lightweight editor
+description: Kate is a multi-document, multi-view text editor by KDE. It features stuff like codefolding, syntaxhighlighting, dynamic word wrap, an embedded console, an extensive plugin interface and some prelimentary scripting support. This package also contains kwrite, a lightweight
+    editor
 optimize   : lto
 builddeps  :
-    - pkgconfig(Qt5Script)
-    - pkgconfig(Qt5X11Extras)
     - pkgconfig(libgit2)
-    - kactivities-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
-    - kguiaddons-devel
-    - kiconthemes-devel
-    - kitemmodels-devel
-    - knewstuff-devel
-    - ktexteditor-devel
-    - kuserfeedback-devel
-    - kwallet-devel
-    - plasma-framework-devel
-    - syntax-highlighting-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-kguiaddons-devel
+    - kf6-kiconthemes-devel
+    - kf6-kitemmodels-devel
+    - kf6-knewstuff-devel
+    - kf6-kuserfeedback-devel
+    - kf6-kwallet-devel
+    - kf6-syntax-highlighting-devel
+    - kf6-ktexteditor-devel
+    - kf6-ktextwidgets-devel
+    - libplasma-devel
+    - plasma-activities-devel
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache
 
     # remove docs
     rm -rf $installdir/usr/share/doc
