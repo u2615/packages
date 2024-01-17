@@ -1,8 +1,8 @@
 name       : kcalc
-version    : 23.08.4
-release    : 67
+version    : 24.01.90
+release    : 68
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.4/src/kcalc-23.08.4.tar.xz : 79491e91a86c6db92c8925f6ee1e03d6621fb1e258724101dffb0aab0940f880
+    - https://cdn.download.kde.org/unstable/release-service/24.01.90/src/kcalc-24.01.90.tar.xz : 3122c2aedae4c03c5b437f1e6dd966ff043f94a50d4de2a5177d19c053a7e26a
 homepage   : https://kde.org/applications/utilities/org.kde.kcalc
 license    : GPL-2.0-or-later
 component  : desktop.kde.core
@@ -13,14 +13,15 @@ optimize   : lto
 libsplit   : no
 builddeps  :
     - pkgconfig(gmp)
-    - kcrash-devel
-    - kdoctools-devel
-    - kguiaddons-devel
-    - ki18n-devel
-    - knotifications-devel
-    - kxmlgui-devel
+    - pkgconfig(Qt6Core5Compat)
+    - kf6-kcrash-devel
+    - kf6-kdoctools-devel
+    - kf6-kguiaddons-devel
+    - kf6-ki18n-devel
+    - kf6-knotifications-devel
+    - kf6-kxmlgui-devel
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
