@@ -1,6 +1,6 @@
 name       : plasma-framework
 version    : 5.114.0
-release    : 86
+release    : 87
 source     :
     - https://cdn.download.kde.org/stable/frameworks/5.114/plasma-framework-5.114.0.tar.xz : 9d3d8db28cf0c2a0539323f7eceabb13561ae657888c5d7f1e7c9581cda11015
 homepage   : https://community.kde.org/Frameworks
@@ -40,7 +40,8 @@ rundeps    :
     - qt5-quickcontrols2
 setup      : |
     %cmake_ninja -DBUILD_QCH=OFF \
-                -DBUILD_TESTING=OFF
+                 -DBUILD_TESTING=OFF \
+                 -DBUILD_DESKTOPTHEMES=OFF
 build      : |
     %ninja_build
 install    : |
