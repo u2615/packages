@@ -1,8 +1,8 @@
 name       : systemsettings
-version    : 5.27.10
-release    : 93
+version    : 5.92.0
+release    : 94
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/systemsettings-5.27.10.tar.xz : af4c47f2cbe3a5cd8789eaad69d6ab4e73909dfe7500c5a71b01f5b82c860d39
+    - https://download.kde.org/unstable/plasma/5.92.0/systemsettings-5.92.0.tar.xz : 813e189ab51084fa848bc1eeb15ceae698bd758c2b4665804a6100ed082d328e
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GFDL-1.2-only
@@ -13,29 +13,29 @@ description: |
     This is a collection of standard plugin interfaces to System Settings.
 optimize   : lto
 builddeps  :
-    - kcmutils-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdeclarative-devel
-    - kdoctools-devel
-    - kactivities-devel
-    - kactivities-stats-devel
-    - kio-devel
-    - kiconthemes-devel
-    - kirigami2-devel
-    - kitemmodels-devel
-    - kguiaddons-devel
-    - knotifications-devel
-    - krunner-devel
+    - kf6-kauth-devel
+    - kf6-kcmutils-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdeclarative-devel
+    - kf6-kdoctools-devel
+    - kf6-kguiaddons-devel
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-kitemmodels-devel
+    - kf6-knotifications-devel
+    - kf6-krunner-devel
+    - plasma-activities-devel
     - plasma-workspace-devel
 rundeps    :
     - flatpak-kcm
-    - kirigami2
+    - kf6-kirigami
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache
     rm -rf $installdir/usr/share/doc
