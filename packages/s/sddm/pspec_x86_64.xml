@@ -25,30 +25,30 @@
             <Path fileType="executable">/usr/bin/sddm-greeter</Path>
             <Path fileType="library">/usr/lib/sysusers.d/sddm.conf</Path>
             <Path fileType="library">/usr/lib/tmpfiles.d/sddm.conf</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Background.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Background.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Button.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Button.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Clock.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Clock.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/ComboBox.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/ComboBox.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/ImageButton.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/ImageButton.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/LayoutBox.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/LayoutBox.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Menu.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Menu.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/PasswordBox.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/PasswordBox.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/PictureBox.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/PictureBox.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/TextBox.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/TextBox.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/TextConstants.qml</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/TextConstants.qmlc</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/qmldir</Path>
-            <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/warning.png</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Background.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Background.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Button.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Button.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Clock.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Clock.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ComboBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ComboBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ImageButton.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ImageButton.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/LayoutBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/LayoutBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Menu.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Menu.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PasswordBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PasswordBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PictureBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PictureBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextConstants.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextConstants.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/qmldir</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/warning.png</Path>
             <Path fileType="library">/usr/lib64/sddm/sddm-helper</Path>
             <Path fileType="library">/usr/lib64/sddm/sddm-helper-start-wayland</Path>
             <Path fileType="library">/usr/lib64/sddm/sddm-helper-start-x11user</Path>
@@ -240,8 +240,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="40">
-            <Date>2023-11-24</Date>
+        <Update release="41">
+            <Date>2024-01-17</Date>
             <Version>0.20.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

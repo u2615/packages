@@ -1,8 +1,10 @@
 name       : sddm
 version    : 0.20.0
-release    : 40
+release    : 41
 source     :
-    - https://github.com/sddm/sddm/archive/refs/tags/v0.20.0.tar.gz : 467c8bd91e0d4f76d4bc4e57ab334f1f48a33478482ba9476d93b0b3d7ace9fb
+    # TODO: Decide if we're going to ship from git source (hopefully not) or switch back to v0.20 (probably switching back to x11 for the greeter in the process)
+    # - https://github.com/sddm/sddm/archive/refs/tags/v0.20.0.tar.gz : 467c8bd91e0d4f76d4bc4e57ab334f1f48a33478482ba9476d93b0b3d7ace9fb
+    - git|https://github.com/sddm/sddm.git : 501129294be1487f753482c29949fc1c19ef340e
 license    :
     - CC-BY-3.0
     - GPL-2.0-or-later
@@ -12,24 +14,27 @@ summary    : Modern display manager for X11 and Wayland
 description: |
     SDDM is a modern display manager for X11 and Wayland aiming to be fast, simple and beautiful. It uses modern technologies like QtQuick, which in turn gives the designer the ability to create smooth, animated user interfaces.
 builddeps  :
-    - pkgconfig(Qt5Help)
-    - pkgconfig(Qt5Qml)
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Qml)
     - pkgconfig(xcb)
     - extra-cmake-modules
     - python-docutils
 rundeps    :
     - linux-driver-management-sddm-integration
-    - qt5-virtualkeyboard
+    - qt6-virtualkeyboard
     - setxkbmap
     - xauth
     - xhost
     - xkbcomp
     - xkeyboard-config
+clang      : yes
+optimize   : lto
 setup      : |
     %apply_patches
     %cmake_ninja -DCMAKE_INSTALL_LIBEXECDIR=%libdir%/%PKGNAME% \
                  -DLOGIN_DEFS_PATH:path=/usr/share/defaults/etc/login.defs \
                  -DSYSTEMD_SYSTEM_UNIT_DIR=%libdir%/systemd/system \
+                 -DBUILD_WITH_QT6=ON \
                  -DBUILD_MAN_PAGES=ON
 build      : |
     %ninja_build
@@ -56,4 +61,4 @@ install    : |
     rmdir $installdir/etc/pam.d
     rmdir $installdir/etc    
 
-    %qml_cache
+    %qml6_cache
