@@ -120,11 +120,18 @@ install    : |
     # 2021-01-20: Force early KMS for everything except Nouveau (this will not work with Nvidia propretary)
     # TODO Try different zstd compression levels to see how they affect boot times
 
+    # TEST MODULES
+    modules="$(cat "$pkgfiles/modules-test")"
+    to_add=""
+    for i in ${modules}; do
+        to_add="$to_add $i"
+    done
+
     LD_PRELOAD='' dracut --tmpdir /tmp -N -f  \
         --kmoddir dracut-modules/lib/modules/${kversion} --kver $kversion \
         --add "bash systemd lvm dm rescue resume fido2 tpm2-tss virtiofs" --omit "nvmf" \
         --strip --hardlink --zstd --reproducible --nomdadmconf --early-microcode \
-        --add-drivers "amdgpu hyperv_drm i915 qxl radeon simpledrm virtio-gpu" \
+        --add-drivers "amdgpu hyperv_drm i915 qxl radeon simpledrm virtio-gpu $to_add" \
         --include $pkgfiles/initrd/timeouts.conf /usr/lib/systemd/system.conf.d/timeouts.conf \
         $installdir/usr/lib/kernel/initrd-$kernID.${version}-${release}
 

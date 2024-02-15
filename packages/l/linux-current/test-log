@@ -1,0 +1,71 @@
+Test #1:
+CONTROL TEST. Built as-is with no changes.
+
+Expected result: Issue present
+
+Result: Issue present
+
+---
+Test #2:
+CONTROL TEST 2. Built with all modules reported by user included in initrd. 
+
+Expected result: Fixed
+Result: Fixed
+
+---
+Test #3:
+Included following modules: https://pastebin.com/raw/D8NPneDP
+
+Result: BAD
+
+---
+Test #4:
+No additional modules. Updated dracut to https://github.com/getsolus/packages/commit/3e251195c5d606d7e5bbcb56bc93c6947a86aa74
+
+Expected Result: Most likely BAD
+Result: BAD
+
+---
+Test #5:
+Dracut update, Added following modules: https://pastebin.com/raw/iSsKc6Ue
+
+Expected Result: Most likely GOOD
+Result: GOOD
+
+---
+Test #6:
+Dracut update, https://pastebin.com/raw/Jz68kL2H
+Note, this test depends on #5 being GOOD
+
+Result: GOOD
+
+---
+Test #7:
+Dracut update, https://pastebin.com/raw/5Kg6MCxP
+Note, this test depends on #5 being GOOD
+
+Result: GOOD
+
+---
+Test #8:
+https://pastebin.com/raw/tzT3Agck
+
+Result: GOOD
+
+---
+Test #9:
+https://pastebin.com/raw/N5dfv4S8
+
+Result: SKIPPED
+
+---
+Test #10:
+https://pastebin.com/raw/2ngyq2gm (TOP)
+
+Result: PENDING
+
+---
+Test #11:
+https://pastebin.com/raw/2ngyq2gm (BOTTOM)
+
+Result: PENDING
