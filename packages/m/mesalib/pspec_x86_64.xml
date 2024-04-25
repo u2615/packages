@@ -58,6 +58,7 @@
             <Path fileType="library">/usr/lib64/libvulkan_intel.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_intel_hasvk.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_lvp.so</Path>
+            <Path fileType="library">/usr/lib64/libvulkan_nouveau.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_radeon.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_virtio.so</Path>
             <Path fileType="library">/usr/lib64/libxatracker.so.2</Path>
@@ -88,6 +89,8 @@
             <Path fileType="data">/usr/share/vulkan/icd.d/intel_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/lvp_icd.i686.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/lvp_icd.x86_64.json</Path>
+            <Path fileType="data">/usr/share/vulkan/icd.d/nouveau_icd.i686.json</Path>
+            <Path fileType="data">/usr/share/vulkan/icd.d/nouveau_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/radeon_icd.i686.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/radeon_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/virtio_icd.i686.json</Path>
@@ -140,6 +143,7 @@
             <Path fileType="library">/usr/lib32/libvulkan_intel.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_intel_hasvk.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_lvp.so</Path>
+            <Path fileType="library">/usr/lib32/libvulkan_nouveau.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_radeon.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_virtio.so</Path>
             <Path fileType="library">/usr/lib32/libxatracker.so.2</Path>
@@ -220,8 +224,8 @@
     </Package>
     <History>
         <Update release="231">
-            <Date>2024-04-24</Date>
-            <Version>24.0.6</Version>
+            <Date>2024-05-02</Date>
+            <Version>24.1.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
