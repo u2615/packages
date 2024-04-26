@@ -1,8 +1,8 @@
 name       : xorg-xwayland
-version    : 23.2.6
+version    : 24.1
 release    : 25
 source     :
-    - https://www.x.org/releases/individual/xserver/xwayland-23.2.6.tar.xz : 1c9a366b4e7ccadba0f9bd313c59eae12d23bd72543b22a26eaf8b20835cfc6d
+    - https://xorg.freedesktop.org/archive/individual/xserver/xwayland-24.0.99.902.tar.xz : a61f88ad90aac5acdc1bf2f682d23bf297cf2fec9a71027dff3806ffd5995e03
 license    : MIT
 component  : xorg.server
 homepage   : https://www.x.org/

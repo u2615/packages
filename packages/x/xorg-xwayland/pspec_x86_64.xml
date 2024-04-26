@@ -3,8 +3,8 @@
         <Name>xorg-xwayland</Name>
         <Homepage>https://www.x.org/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>xorg.server</PartOf>
@@ -28,11 +28,11 @@
     </Package>
     <History>
         <Update release="25">
-            <Date>2024-04-10</Date>
-            <Version>23.2.6</Version>
+            <Date>2024-05-02</Date>
+            <Version>24.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>
